@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 
 import { includeIgnoreFile, type FlatConfig } from '@eslint/compat';
 
-export function ignoreFile(file: string, meta: ImportMeta): FlatConfig {
+export function useIgnoreFile(file: string, meta: ImportMeta): FlatConfig {
   const __filename = fileURLToPath(meta.url);
   const __dirname = path.dirname(__filename);
   const gitignorePath = path.resolve(__dirname, file);
