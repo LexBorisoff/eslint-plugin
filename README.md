@@ -24,7 +24,7 @@ yarn add @lexjs/eslint-plugin --dev
 
 ## Usage (Flat config)
 
-```typescript
+```javascript
 // eslint.config.js
 import lexjs from '@lexjs/eslint-plugin';
 
@@ -51,7 +51,7 @@ _**Extends Configs**_
 
 _**Rules**_
 
-```typescript
+```javascript
 {
   eqeqeq: ['error', 'smart'],
   'prefer-const': 'warn',
@@ -65,7 +65,7 @@ _**Rules**_
 
 _**Import Rules**_
 
-```typescript
+```javascript
 {
   'import/no-cycle': 'error',
   'import/no-duplicates': 'error',
@@ -113,13 +113,13 @@ _**Extends Configs**_
 
 **_Files_**
 
-```typescript
+```javascript
 '**/*.{ts,tsx}'
 ```
 
 _**Rules**_
 
-```typescript
+```javascript
 {
   'no-shadow': 'off',
   '@typescript-eslint/no-shadow': 'error',
@@ -162,7 +162,7 @@ _**Rules**_
 
 _**Import Settings**_
 
-```typescript
+```javascript
 {
   'import/resolver': {
     typescript: {
@@ -180,13 +180,13 @@ Configure ESLint to ignore certain files and directories by including patterns f
 
 **_Type_**
 
-```typescript
+```javascript
 function useIgnoreFile(file: string, meta: ImportMeta): FlatConfig;
 ```
 
 **_Usage_**
 
-```typescript
+```javascript
 // eslint.config.js
 import { useIgnoreFile } from '@lexjs/eslint-plugin/utils';
 
