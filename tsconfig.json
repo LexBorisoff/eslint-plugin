@@ -1,15 +1,31 @@
 {
   "compilerOptions": {
-    "target": "ES2016",
+    /* Env */
+    "target": "ES2022",
+    "lib": ["ES2022"],
+
+    /* Emit */
+    "declaration": true,
+    "sourceMap": false,
+
+    /* Modules */
+    "rootDir": "src",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "declaration": true,
+
+    /* Interop: */
+    "esModuleInterop": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+
+    /* Strictness */
     "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Completeness: */
     "skipLibCheck": true
   },
   "files": [],

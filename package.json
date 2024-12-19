@@ -1,7 +1,7 @@
 {
   "name": "@lexjs/eslint-plugin",
   "version": "0.0.0-semantically-released",
-  "description": "lexjs eslint plugin",
+  "description": "ESLint Plugin",
   "publishConfig": {
     "access": "public"
   },
@@ -31,15 +31,19 @@
     "check-style": "npm run format:check && npm run lint",
     "check-build": "npm run tsc -- --noEmit",
     "tsc": "tsc -p ./tsconfig.build.json",
-    "format": "prettier --write *.{js,cjs,mjs,ts,cts,mts} src/**/*.ts",
-    "format:check": "prettier --check *.{js,cjs,mjs,ts,cts,mts} src/**/*.ts",
-    "lint": "eslint src/**/*.{js,ts}",
+    "format": "prettier --write \"*.{js,cjs,mjs,ts,cts,mts}\" \"src/**/*.ts\"",
+    "format:check": "prettier --check \"*.{js,cjs,mjs,ts,cts,mts}\" \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.{js,ts}\"",
     "lint:fix": "npm run lint -- --fix",
     "style": "npm run format && npm run lint:fix",
     "build:eslint": "rimraf ./eslint && tsc -p ./tsconfig.eslint.json",
     "prepare": "husky"
   },
-  "keywords": [],
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
   "author": "Lex Borisoff <lex@borisoff.dev>",
   "repository": {
     "type": "git",

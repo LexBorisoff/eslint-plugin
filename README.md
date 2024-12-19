@@ -1,4 +1,4 @@
-<h1 align="center">LexJS ESLint plugin</h1>
+# `@lexjs/eslint-plugin`
 
 - [Installation](#installation)
 - [Usage](#usage-flat-config)
@@ -24,7 +24,7 @@ yarn add @lexjs/eslint-plugin --dev
 
 ## Usage (Flat config)
 
-```typescript
+```javascript
 // eslint.config.js
 import lexjs from '@lexjs/eslint-plugin';
 
@@ -51,7 +51,7 @@ _**Extends Configs**_
 
 _**Rules**_
 
-```typescript
+```javascript
 {
   eqeqeq: ['error', 'smart'],
   'prefer-const': 'warn',
@@ -65,7 +65,7 @@ _**Rules**_
 
 _**Import Rules**_
 
-```typescript
+```javascript
 {
   'import/no-cycle': 'error',
   'import/no-duplicates': 'error',
@@ -111,15 +111,62 @@ _**Extends Configs**_
 - [Import Plugin](https://www.npmjs.com/package/eslint-plugin-import)
   - TypeScript
 
+**_Files_**
+
+```javascript
+'**/*.{ts,tsx}'
+```
+
+_**Rules**_
+
+```javascript
+{
+  'no-shadow': 'off',
+  '@typescript-eslint/no-shadow': 'error',
+  'no-use-before-define': 'off',
+  '@typescript-eslint/no-use-before-define': 'error',
+  '@typescript-eslint/no-empty-object-type': 'error',
+  '@typescript-eslint/interface-name-prefix': 'off',
+  '@typescript-eslint/explicit-module-boundary-types': 'off',
+  '@typescript-eslint/no-explicit-any': 'off',
+  '@typescript-eslint/explicit-function-return-type': [
+    'error',
+    {
+      allowExpressions: true,
+    },
+  ],
+  'require-await': 'off',
+  '@typescript-eslint/require-await': 'error',
+  'no-unused-vars': 'off',
+  '@typescript-eslint/no-unused-vars': [
+    'warn',
+    {
+      ignoreRestSiblings: true,
+    },
+  ],
+  '@typescript-eslint/naming-convention': [
+    'error',
+    {
+      selector: 'variable',
+      format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+      leadingUnderscore: 'allowSingleOrDouble',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      selector: 'enumMember',
+      format: ['PascalCase'],
+    },
+  ],
+}
+```
+
 _**Import Settings**_
 
-```typescript
+```javascript
 {
-  settings: {
-    'import/resolver': {
-      typescript: {
-        alwaysTryTypes: true,
-      },
+  'import/resolver': {
+    typescript: {
+      alwaysTryTypes: true,
     },
   },
 }
@@ -133,13 +180,13 @@ Configure ESLint to ignore certain files and directories by including patterns f
 
 **_Type_**
 
-```typescript
+```javascript
 function useIgnoreFile(file: string, meta: ImportMeta): FlatConfig;
 ```
 
 **_Usage_**
 
-```typescript
+```javascript
 // eslint.config.js
 import { useIgnoreFile } from '@lexjs/eslint-plugin/utils';
 
