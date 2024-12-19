@@ -1,10 +1,10 @@
 import tseslint from 'typescript-eslint';
 
 import plugin from './eslint/plugin/index.js';
-import { ignoreFile } from './eslint/utils/ignore-file.js';
+import { useIgnoreFile } from './eslint/utils/use-ignore-file.js';
 
 export default tseslint.config(
-  ignoreFile('.gitignore', import.meta),
+  useIgnoreFile('.gitignore', import.meta),
   { ignores: ['eslint'] },
   plugin.configs.recommended,
   plugin.configs.typescript,

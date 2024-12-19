@@ -1,7 +1,7 @@
 {
   "name": "@lexjs/eslint-plugin",
   "version": "0.0.0-semantically-released",
-  "description": "lexjs eslint plugin",
+  "description": "ESLint Plugin",
   "publishConfig": {
     "access": "public"
   },
@@ -39,7 +39,11 @@
     "build:eslint": "rimraf ./eslint && tsc -p ./tsconfig.eslint.json",
     "prepare": "husky"
   },
-  "keywords": [],
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
   "author": "Lex Borisoff <lex@borisoff.dev>",
   "repository": {
     "type": "git",
