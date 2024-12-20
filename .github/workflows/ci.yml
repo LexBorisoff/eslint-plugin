@@ -12,6 +12,7 @@ concurrency:
 
 jobs:
   ci:
+    name: CI
     runs-on: ubuntu-latest
 
     strategy:
@@ -29,9 +30,10 @@ jobs:
       - run: npm run ci
 
   results:
-    if: always()
-    runs-on: ubuntu-latest
     name: CI Results
+    runs-on: ubuntu-latest
+    if: always()
+
     needs: ci
     steps:
       - run: |
