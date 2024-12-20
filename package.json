@@ -47,11 +47,11 @@
   "author": "Lex Borisoff <lex@borisoff.dev>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lexjs-dev/eslint-plugin.git"
+    "url": "git+https://github.com/LexBorisoff/eslint-plugin.git"
   },
-  "homepage": "https://github.com/lexjs-dev/eslint-plugin",
+  "homepage": "https://github.com/LexBorisoff/eslint-plugin",
   "bugs": {
-    "url": "https://github.com/lexjs-dev/eslint-plugin/issues"
+    "url": "https://github.com/LexBorisoff/eslint-plugin/issues"
   },
   "license": "ISC",
   "peerDependencies": {
