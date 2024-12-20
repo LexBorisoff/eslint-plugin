@@ -52,11 +52,6 @@ jobs:
           fetch-depth: 0
           ssh-key: ${{ secrets.DEPLOY_KEY }}
 
-      - name: Configure git
-        run: |
-          git config --local user.email "github-actions@github.com"
-          git config --local user.name "GitHub Actions"
-
       - name: Merge main into dev
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
