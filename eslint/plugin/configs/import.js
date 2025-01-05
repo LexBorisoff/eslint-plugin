@@ -1,6 +1,10 @@
 import importPlugin from 'eslint-plugin-import';
+import unusedImports from 'eslint-plugin-unused-imports';
 import tseslint from 'typescript-eslint';
 export default tseslint.config(importPlugin.flatConfigs.recommended, {
+    plugins: {
+        'unused-imports': unusedImports,
+    },
     rules: {
         'import/no-cycle': 'error',
         'import/no-duplicates': 'error',
@@ -26,12 +30,13 @@ export default tseslint.config(importPlugin.flatConfigs.recommended, {
                     'object',
                     'type',
                 ],
-                'newlines-between': 'always-and-inside-groups',
+                'newlines-between': 'always',
                 alphabetize: {
                     order: 'asc',
                     caseInsensitive: true,
                 },
             },
         ],
+        'unused-imports/no-unused-imports': 'error',
     },
 });
