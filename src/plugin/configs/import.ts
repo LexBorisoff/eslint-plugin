@@ -27,7 +27,7 @@ export default tseslint.config(importPlugin.flatConfigs.recommended, {
           'object',
           'type',
         ],
-        'newlines-between': 'always-and-inside-groups',
+        'newlines-between': 'always',
         alphabetize: {
           order: 'asc',
           caseInsensitive: true,
