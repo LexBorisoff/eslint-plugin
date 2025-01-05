@@ -91,13 +91,14 @@ _**Import Rules**_
         'object',
         'type',
       ],
-      'newlines-between': 'always-and-inside-groups',
+      'newlines-between': 'always',
       alphabetize: {
         order: 'asc',
         caseInsensitive: true,
       },
     },
   ],
+  'unused-imports/no-unused-imports': 'error',
 }
 ```
 
