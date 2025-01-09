@@ -6,8 +6,6 @@
     "access": "public"
   },
   "type": "module",
-  "main": "./dist/plugin/index.js",
-  "types": "./dist/types/plugin/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/types/plugin/index.d.ts",
@@ -25,12 +23,12 @@
   ],
   "scripts": {
     "prepack": "npm run build",
-    "build": "npm run tsc",
+    "build": "npm run compile",
     "prebuild": "npm run ci && rimraf ./dist",
     "ci": "npm run check-style && npm run check-build",
     "check-style": "npm run format:check && npm run lint",
-    "check-build": "npm run tsc -- --noEmit",
-    "tsc": "tsc -p ./tsconfig.build.json",
+    "check-build": "npm run compile -- --noEmit",
+    "compile": "tsc -p ./tsconfig.build.json",
     "format": "prettier --write \"*.{js,cjs,mjs,ts,cts,mts}\" \"src/**/*.ts\"",
     "format:check": "prettier --check \"*.{js,cjs,mjs,ts,cts,mts}\" \"src/**/*.ts\"",
     "lint": "eslint \"src/**/*.{js,ts}\"",
