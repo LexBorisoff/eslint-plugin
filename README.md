@@ -1,5 +1,9 @@
 # `@lexjs/eslint-plugin`
 
+![Build](https://img.shields.io/github/actions/workflow/status/LexBorisoff/eslint-plugin/release.yml)
+![NPM Version](https://img.shields.io/npm/v/@lexjs/eslint-plugin)
+![Static Badge](https://img.shields.io/badge/package-ESM--only-ffe536)
+
 - [Installation](#installation)
 - [Usage](#usage-flat-config)
 - [Configs](#configs)
