@@ -153,13 +153,13 @@ _**Rules**_
     'error',
     {
       selector: 'variable',
-      format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+      format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
       leadingUnderscore: 'allowSingleOrDouble',
       trailingUnderscore: 'forbid',
     },
     {
       selector: 'enumMember',
-      format: ['PascalCase'],
+      format: ['PascalCase', 'UPPER_CASE'],
     },
   ],
 }
