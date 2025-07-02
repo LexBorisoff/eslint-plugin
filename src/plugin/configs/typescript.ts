@@ -42,7 +42,7 @@ export default tseslint.config(
         },
         {
           selector: 'enumMember',
-          format: ['PascalCase'],
+          format: ['PascalCase', 'UPPER_CASE'],
         },
       ],
     },
