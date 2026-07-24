@@ -1,6 +1,8 @@
+import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 import importConfigTypescript from './import-typescript.js';
-export default tseslint.config(tseslint.configs.recommended, tseslint.configs.eslintRecommended, importConfigTypescript, {
+export default defineConfig(tseslint.configs.recommended, tseslint.configs.eslintRecommended, importConfigTypescript, {
+    name: '@lexjs/eslint-plugin/typescript',
     files: ['**/*.{ts,tsx}'],
     rules: {
         'no-shadow': 'off',
@@ -24,6 +26,7 @@ export default tseslint.config(tseslint.configs.recommended, tseslint.configs.es
             'warn',
             {
                 ignoreRestSiblings: true,
+                argsIgnorePattern: '^_',
             },
         ],
         '@typescript-eslint/naming-convention': [
@@ -36,7 +39,7 @@ export default tseslint.config(tseslint.configs.recommended, tseslint.configs.es
             },
             {
                 selector: 'enumMember',
-                format: ['PascalCase'],
+                format: ['PascalCase', 'UPPER_CASE'],
             },
         ],
     },

@@ -1,7 +1,8 @@
+import { defineConfig } from 'eslint/config';
 import importPlugin from 'eslint-plugin-import';
 import unusedImports from 'eslint-plugin-unused-imports';
-import tseslint from 'typescript-eslint';
-export default tseslint.config(importPlugin.flatConfigs.recommended, {
+export default defineConfig(importPlugin.flatConfigs.recommended, {
+    name: '@lexjs/eslint-plugin/import',
     plugins: {
         'unused-imports': unusedImports,
     },

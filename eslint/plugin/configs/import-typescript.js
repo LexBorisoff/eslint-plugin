@@ -1,6 +1,7 @@
+import { defineConfig } from 'eslint/config';
 import importPlugin from 'eslint-plugin-import';
-import tseslint from 'typescript-eslint';
-export default tseslint.config(importPlugin.flatConfigs.typescript, {
+export default defineConfig(importPlugin.flatConfigs.typescript, {
+    name: '@lexjs/eslint-plugin/import-typescript',
     settings: {
         'import/resolver': {
             typescript: {
