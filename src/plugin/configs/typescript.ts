@@ -1,12 +1,14 @@
+import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 
 import importConfigTypescript from './import-typescript.js';
 
-export default tseslint.config(
+export default defineConfig(
   tseslint.configs.recommended,
   tseslint.configs.eslintRecommended,
   importConfigTypescript,
   {
+    name: '@lexjs/eslint-plugin/typescript',
     files: ['**/*.{ts,tsx}'],
     rules: {
       'no-shadow': 'off',
@@ -30,13 +32,14 @@ export default tseslint.config(
         'warn',
         {
           ignoreRestSiblings: true,
+          argsIgnorePattern: '^_',
         },
       ],
       '@typescript-eslint/naming-convention': [
         'error',
         {
           selector: 'variable',
-          format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+          format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
           leadingUnderscore: 'allowSingleOrDouble',
           trailingUnderscore: 'forbid',
         },

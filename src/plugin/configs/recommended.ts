@@ -1,14 +1,15 @@
 import eslint from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
-import tseslint from 'typescript-eslint';
 
 import importConfig from './import.js';
 
-export default tseslint.config(
+export default defineConfig(
   eslint.configs.recommended,
   prettierRecommended,
   importConfig,
   {
+    name: '@lexjs/eslint-plugin/recommended',
     rules: {
       eqeqeq: ['error', 'smart'],
       'prefer-const': 'warn',
