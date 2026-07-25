@@ -5,7 +5,7 @@ import plugin from './eslint/plugin/index.js';
 import { useIgnoreFile } from './eslint/utils/use-ignore-file.js';
 
 export default defineConfig(
-  useIgnoreFile('.gitignore', import.meta),
+  useIgnoreFile('.gitignore', import.meta, { gitignoreResolution: true }),
   { ignores: ['eslint'] },
   plugin.configs.recommended,
   plugin.configs.typescript,
