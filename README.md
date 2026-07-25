@@ -147,6 +147,7 @@ _**Rules**_
     'warn',
     {
       ignoreRestSiblings: true,
+      argsIgnorePattern: '^_',
     },
   ],
   '@typescript-eslint/naming-convention': [
@@ -186,7 +187,7 @@ Configure ESLint to ignore certain files and directories by including patterns f
 **_Type_**
 
 ```javascript
-function useIgnoreFile(file: string, meta: ImportMeta): FlatConfig;
+function useIgnoreFile(file: string, meta: ImportMeta, options?: IncludeIgnoreFileOptions): ConfigObject;
 ```
 
 **_Usage_**
@@ -196,7 +197,7 @@ function useIgnoreFile(file: string, meta: ImportMeta): FlatConfig;
 import { useIgnoreFile } from '@lexjs/eslint-plugin/utils';
 
 export default [
-  useIgnoreFile('.gitignore', import.meta),
+  useIgnoreFile('.gitignore', import.meta, { gitignoreResolution: true }),
   // other configs
 ];
 ```

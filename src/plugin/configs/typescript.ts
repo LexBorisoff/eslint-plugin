@@ -39,7 +39,7 @@ export default defineConfig(
         'error',
         {
           selector: 'variable',
-          format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+          format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
           leadingUnderscore: 'allowSingleOrDouble',
           trailingUnderscore: 'forbid',
         },
