@@ -48,6 +48,7 @@ export default defineConfig(
           format: ['PascalCase', 'UPPER_CASE'],
         },
       ],
+      '@typescript-eslint/consistent-type-imports': 'error',
     },
   },
 );
