@@ -9,7 +9,7 @@ export default defineConfig(
   prettierRecommended,
   importConfig,
   {
-    name: '@lexjs/eslint-plugin/recommended',
+    name: '@lexjs/eslint/recommended',
     rules: {
       eqeqeq: ['error', 'smart'],
       'prefer-const': 'warn',

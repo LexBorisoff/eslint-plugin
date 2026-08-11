@@ -3,7 +3,7 @@ import { defineConfig } from 'eslint/config';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 import importConfig from './import.js';
 export default defineConfig(eslint.configs.recommended, prettierRecommended, importConfig, {
-    name: '@lexjs/eslint-plugin/recommended',
+    name: '@lexjs/eslint/recommended',
     rules: {
         eqeqeq: ['error', 'smart'],
         'prefer-const': 'warn',

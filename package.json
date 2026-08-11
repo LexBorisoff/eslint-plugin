@@ -1,5 +1,5 @@
 {
-  "name": "@lexjs/eslint-plugin",
+  "name": "@lexjs/eslint",
   "version": "0.0.0-semantically-released",
   "description": "ESLint Plugin",
   "publishConfig": {

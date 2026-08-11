@@ -8,7 +8,7 @@ export default defineConfig(
   tseslint.configs.eslintRecommended,
   importConfigTypescript,
   {
-    name: '@lexjs/eslint-plugin/typescript',
+    name: '@lexjs/eslint/typescript',
     files: ['**/*.{ts,tsx}'],
     rules: {
       'no-shadow': 'off',
