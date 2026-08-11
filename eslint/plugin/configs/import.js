@@ -2,7 +2,7 @@ import { defineConfig } from 'eslint/config';
 import importPlugin from 'eslint-plugin-import';
 import unusedImports from 'eslint-plugin-unused-imports';
 export default defineConfig(importPlugin.flatConfigs.recommended, {
-    name: '@lexjs/eslint-plugin/import',
+    name: '@lexjs/eslint/import',
     plugins: {
         'unused-imports': unusedImports,
     },
