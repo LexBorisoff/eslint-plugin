@@ -1,7 +1,7 @@
-# `@lexjs/eslint-plugin`
+# `@lexjs/eslint`
 
 ![Build](https://img.shields.io/github/actions/workflow/status/LexBorisoff/eslint-plugin/release.yml)
-![NPM Version](https://img.shields.io/npm/v/@lexjs/eslint-plugin)
+![NPM Version](https://img.shields.io/npm/v/@lexjs/eslint)
 ![Static Badge](https://img.shields.io/badge/package-ESM--only-ffe536)
 
 - [Installation](#installation)
@@ -15,22 +15,26 @@
 ## Installation
 
 ```bash
-npm install @lexjs/eslint-plugin --save-dev
+npm install @lexjs/eslint --save-dev
 ```
 
 ```bash
-pnpm add @lexjs/eslint-plugin --save-dev
+pnpm add @lexjs/eslint --save-dev
 ```
 
 ```bash
-yarn add @lexjs/eslint-plugin --dev
+yarn add @lexjs/eslint --dev
+```
+
+```bash
+bun add @lexjs/eslint --dev
 ```
 
 ## Usage (Flat config)
 
 ```javascript
 // eslint.config.js
-import lexjs from '@lexjs/eslint-plugin';
+import lexjs from '@lexjs/eslint';
 
 export default [
   // other configs
@@ -194,7 +198,7 @@ function useIgnoreFile(file: string, meta: ImportMeta, options?: IncludeIgnoreFi
 
 ```javascript
 // eslint.config.js
-import { useIgnoreFile } from '@lexjs/eslint-plugin/utils';
+import { useIgnoreFile } from '@lexjs/eslint/utils';
 
 export default [
   useIgnoreFile('.gitignore', import.meta, { gitignoreResolution: true }),

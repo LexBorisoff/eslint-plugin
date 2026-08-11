@@ -2,7 +2,7 @@ import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 import importConfigTypescript from './import-typescript.js';
 export default defineConfig(tseslint.configs.recommended, tseslint.configs.eslintRecommended, importConfigTypescript, {
-    name: '@lexjs/eslint-plugin/typescript',
+    name: '@lexjs/eslint/typescript',
     files: ['**/*.{ts,tsx}'],
     rules: {
         'no-shadow': 'off',
@@ -12,7 +12,7 @@ export default defineConfig(tseslint.configs.recommended, tseslint.configs.eslin
         '@typescript-eslint/no-empty-object-type': 'error',
         '@typescript-eslint/interface-name-prefix': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
-        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-explicit-any': 'error',
         '@typescript-eslint/explicit-function-return-type': [
             'error',
             {
@@ -33,7 +33,7 @@ export default defineConfig(tseslint.configs.recommended, tseslint.configs.eslin
             'error',
             {
                 selector: 'variable',
-                format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+                format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
                 leadingUnderscore: 'allowSingleOrDouble',
                 trailingUnderscore: 'forbid',
             },
@@ -42,5 +42,6 @@ export default defineConfig(tseslint.configs.recommended, tseslint.configs.eslin
                 format: ['PascalCase', 'UPPER_CASE'],
             },
         ],
+        '@typescript-eslint/consistent-type-imports': 'error',
     },
 });
