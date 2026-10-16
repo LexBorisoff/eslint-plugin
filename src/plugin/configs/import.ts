@@ -1,25 +1,26 @@
-import { defineConfig } from 'eslint/config';
-import importPlugin from 'eslint-plugin-import';
+import importPlugin from 'eslint-plugin-import-x';
 import unusedImports from 'eslint-plugin-unused-imports';
 
-export default defineConfig(importPlugin.flatConfigs.recommended, {
+export default {
   name: '@lexjs/eslint/import',
   plugins: {
     'unused-imports': unusedImports,
+    'import-x': importPlugin,
   },
   rules: {
-    'import/no-cycle': 'error',
-    'import/no-duplicates': 'error',
-    'import/first': 'error',
-    'import/newline-after-import': 'error',
-    'import/no-named-as-default-member': 'off',
+    ...importPlugin.flatConfigs.recommended.rules,
+    'import-x/no-cycle': 'error',
+    'import-x/no-duplicates': 'error',
+    'import-x/first': 'error',
+    'import-x/newline-after-import': 'error',
+    'import-x/no-named-as-default-member': 'off',
     'padding-line-between-statements': [
       'error',
       { blankLine: 'always', prev: '*', next: 'export' },
       { blankLine: 'always', prev: 'export', next: '*' },
       { blankLine: 'any', prev: 'export', next: 'export' },
     ],
-    'import/order': [
+    'import-x/order': [
       'error',
       {
         groups: [
@@ -41,4 +42,4 @@ export default defineConfig(importPlugin.flatConfigs.recommended, {
     ],
     'unused-imports/no-unused-imports': 'error',
   },
-});
+};

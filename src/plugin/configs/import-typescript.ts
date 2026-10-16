@@ -1,13 +1,18 @@
-import { defineConfig } from 'eslint/config';
-import importPlugin from 'eslint-plugin-import';
+import importPlugin from 'eslint-plugin-import-x';
 
-export default defineConfig(importPlugin.flatConfigs.typescript, {
+export default {
   name: '@lexjs/eslint/import-typescript',
+  plugins: {
+    'import-x': importPlugin,
+  },
   settings: {
-    'import/resolver': {
+    'import-x/resolver': {
       typescript: {
         alwaysTryTypes: true,
       },
     },
   },
-});
+  rules: {
+    ...importPlugin.flatConfigs.typescript.rules,
+  },
+};
