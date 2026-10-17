@@ -1,15 +1,25 @@
-import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 
-import importConfigTypescript from './import-typescript.js';
-
-export default defineConfig(
-  tseslint.configs.recommended,
+export default [
+  ...tseslint.configs.recommended,
   tseslint.configs.eslintRecommended,
-  importConfigTypescript,
+  {
+    name: '@lexjs/eslint/unused-vars',
+    files: ['**/*.{js,mjs,cjs,ts,mts,cts,tsx}'],
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        {
+          ignoreRestSiblings: true,
+          argsIgnorePattern: '^_',
+        },
+      ],
+    },
+  },
   {
     name: '@lexjs/eslint/typescript',
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{ts,mts,cts,tsx}'],
     rules: {
       'no-shadow': 'off',
       '@typescript-eslint/no-shadow': 'error',
@@ -27,14 +37,6 @@ export default defineConfig(
       ],
       'require-await': 'off',
       '@typescript-eslint/require-await': 'error',
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        {
-          ignoreRestSiblings: true,
-          argsIgnorePattern: '^_',
-        },
-      ],
       '@typescript-eslint/naming-convention': [
         'error',
         {
@@ -51,4 +53,4 @@ export default defineConfig(
       '@typescript-eslint/consistent-type-imports': 'error',
     },
   },
-);
+].flat();

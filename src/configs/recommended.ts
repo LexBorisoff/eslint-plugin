@@ -1,13 +1,9 @@
-import eslint from '@eslint/js';
-import { defineConfig } from 'eslint/config';
+import js from '@eslint/js';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
 
-import importConfig from './import.js';
-
-export default defineConfig(
-  eslint.configs.recommended,
+export default [
+  js.configs.recommended,
   prettierRecommended,
-  importConfig,
   {
     name: '@lexjs/eslint/recommended',
     rules: {
@@ -20,4 +16,4 @@ export default defineConfig(
       'no-console': 'warn',
     },
   },
-);
+].flat();

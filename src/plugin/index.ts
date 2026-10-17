@@ -1,9 +1,5 @@
-import recommended from './configs/recommended.js';
-import typescript from './configs/typescript.js';
+import configs from '../configs/index.js';
 
 export default {
-  configs: {
-    recommended,
-    typescript,
-  },
+  configs,
 };

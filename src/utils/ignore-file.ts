@@ -7,7 +7,7 @@ import {
   type IncludeIgnoreFileOptions,
 } from '@eslint/config-helpers';
 
-export function useIgnoreFile(
+export function ignoreFile(
   file: string,
   meta: ImportMeta,
   options?: IncludeIgnoreFileOptions,
