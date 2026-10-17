@@ -36,15 +36,15 @@ bun add @lexjs/eslint --dev
 
 ```javascript
 // eslint.config.js
-import lexjs from '@lexjs/eslint';
+import lexjs from '@lexjs/eslint/configs';
 import { defineConfig } from 'eslint/config';
 
 export default defineConfig(
   // other configs
-  ...lexjs.configs.recommended,
-  ...lexjs.configs.typescript,
-  ...lexjs.configs.import,
-  ...lexjs.configs.importTs,
+  ...lexjs.recommended,
+  ...lexjs.typescript,
+  ...lexjs.import,
+  ...lexjs.importTs,
   // other configs
 );
 ```
