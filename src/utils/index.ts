@@ -1,1 +1,1 @@
-export * from './use-ignore-file.js';
+export * from './ignore-file.js';
