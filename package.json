@@ -12,6 +12,11 @@
       "import": "./dist/plugin/index.js",
       "default": "./dist/plugin/index.js"
     },
+    "./configs": {
+      "types": "./dist/types/configs/index.d.ts",
+      "import": "./dist/configs/index.js",
+      "default": "./dist/configs/index.js"
+    },
     "./utils": {
       "types": "./dist/types/utils/index.d.ts",
       "import": "./dist/utils/index.js",
