@@ -1,18 +1,16 @@
-import importPlugin from 'eslint-plugin-import-x';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
+import { importX } from 'eslint-plugin-import-x';
 
-export default {
-  name: '@lexjs/eslint/import-typescript',
-  plugins: {
-    'import-x': importPlugin,
-  },
-  settings: {
-    'import-x/resolver': {
-      typescript: {
-        alwaysTryTypes: true,
-      },
+export default [
+  importX.flatConfigs.typescript,
+  {
+    name: '@lexjs/eslint/import-typescript',
+    settings: {
+      'import-x/resolver-next': [
+        createTypeScriptImportResolver({
+          alwaysTryTypes: true,
+        }),
+      ],
     },
   },
-  rules: {
-    ...importPlugin.flatConfigs.typescript.rules,
-  },
-};
+].flat();
