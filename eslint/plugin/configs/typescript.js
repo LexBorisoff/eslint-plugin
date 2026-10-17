@@ -1,9 +1,7 @@
 import tseslint from 'typescript-eslint';
-import importConfigTypescript from './import-typescript.js';
 export default [
     ...tseslint.configs.recommended,
     tseslint.configs.eslintRecommended,
-    importConfigTypescript,
     {
         name: '@lexjs/eslint/unused-vars',
         files: ['**/*.{js,mjs,cjs,ts,mts,cts,tsx}'],

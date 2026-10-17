@@ -1,10 +1,8 @@
 import js from '@eslint/js';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
-import importConfig from './import.js';
 export default [
     js.configs.recommended,
     prettierRecommended,
-    importConfig,
     {
         name: '@lexjs/eslint/recommended',
         rules: {
